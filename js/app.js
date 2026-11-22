@@ -848,6 +848,7 @@ function formHtml(draft, ctx) {
                   draft.date,
                 )}" aria-describedby="err-date" />
                 <p class="field-hint">仅填日期时为全天事项。</p>
+                <p class="field-error" id="err-date" aria-live="polite" hidden></p>
               </div>
               <div class="field-sub">
                 <label for="f-startTime">开始</label>
@@ -855,6 +856,7 @@ function formHtml(draft, ctx) {
                   draft.startTime,
                 )}" aria-describedby="err-startTime" />
                 <p class="field-hint">选填</p>
+                <p class="field-error" id="err-startTime" aria-live="polite" hidden></p>
               </div>
               <div class="field-sub">
                 <label for="f-endTime">结束</label>
@@ -862,11 +864,9 @@ function formHtml(draft, ctx) {
                   draft.endTime,
                 )}" aria-describedby="err-endTime" />
                 <p class="field-hint">选填，需晚于开始时间</p>
+                <p class="field-error" id="err-endTime" aria-live="polite" hidden></p>
               </div>
             </div>
-            <p class="field-error" id="err-date" aria-live="polite" hidden></p>
-            <p class="field-error" id="err-startTime" aria-live="polite" hidden></p>
-            <p class="field-error" id="err-endTime" aria-live="polite" hidden></p>
           </div>
 
           <div class="field-row">
