@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#f5f6f8" />
+    <meta name="description" content="个人待办与月历：今天、全部、月历和已完成，数据保存在当前浏览器。" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <title>我的待办 · 待办与日程</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="storage-warning" class="banner" role="status" hidden></div>
+
+    <header class="app-header">
+      <div class="header-inner">
+        <a class="brand" href="#/today" aria-label="我的待办首页">
+          <span class="brand-mark" aria-hidden="true">✓</span>
+          <span class="brand-text">我的待办</span>
+        </a>
+        <nav class="tabs" aria-label="主导航">
+          <a class="tab" href="#/today" data-nav="today">今天</a>
+          <a class="tab" href="#/all" data-nav="all">全部</a>
+          <a class="tab" href="#/calendar" data-nav="calendar">月历</a>
+          <a class="tab" href="#/completed" data-nav="completed">已完成</a>
+        </nav>
+        <button class="btn btn-primary add-button" type="button" data-action="add">
+          <span aria-hidden="true">＋</span> 新增
+        </button>
+      </div>
+    </header>
+
+    <main id="app" class="app-main" tabindex="-1"></main>
+
+    <footer class="app-footer">
+      <p>数据保存在当前浏览器。清除站点数据会移除已保存的事项。</p>
+    </footer>
+
+    <div id="modal-root"></div>
+    <div id="toast-region" class="toast-region" role="status" aria-live="polite"></div>
+    <div id="reminder-region" class="reminder-region" aria-live="assertive"></div>
+
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>

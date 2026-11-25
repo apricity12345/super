@@ -1,0 +1,11 @@
+{
+  "name": "personal-todo-calendar",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "单页个人待办与月历，数据保存在浏览器本地。",
+  "scripts": {
+    "test": "node --test",
+    "start": "python3 -m http.server 8000"
+  }
+}
