@@ -384,6 +384,7 @@ a {
 .item.is-done .item-title {
   color: var(--muted);
   text-decoration: line-through;
+  text-decoration-thickness: 2px;
 }
 
 .item-check {
