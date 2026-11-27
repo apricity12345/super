@@ -386,6 +386,10 @@ a {
   text-decoration: line-through;
 }
 
+.item[data-context="completed"].is-done .item-title {
+  text-decoration-thickness: 3px;
+}
+
 .item-check {
   display: inline-grid;
   place-items: center;
