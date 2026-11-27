@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#f6f5f1" />
+    <meta name="description" content="张旭锋的个人主页：关于我、技能、项目与联系方式。" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <title>张旭锋 · 个人主页</title>
+    <script>
+      // 在首次绘制前恢复主题，避免闪烁；解析规则与 render.js 的 resolveTheme 保持一致。
+      try {
+        const saved = window.localStorage.getItem("profile-theme");
+        window.document.documentElement.dataset.theme =
+          saved === "light" || saved === "dark"
+            ? saved
+            : window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+      } catch {
+        // localStorage 不可用时保持默认浅色主题。
+      }
+    </script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+    <div id="app"></div>
+    <noscript>
+      <p class="noscript">请启用 JavaScript 查看个人主页内容。</p>
+    </noscript>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
