@@ -1,0 +1,11 @@
+{
+  "name": "profile",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "张旭锋的个人主页：单页静态站，零依赖。",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "test": "node --test"
+  }
+}
